@@ -1,11 +1,11 @@
 package ru.shashy.springVerV2.TestByCleanSpringExampleFromBook.Repositories;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import ru.shashy.springVerV2.TestByCleanSpringExampleFromBook.Helper.CommentRepository;
 import ru.shashy.springVerV2.TestByCleanSpringExampleFromBook.Model.Comment;
 
 
-@Component
+@Repository
 public class DBCommentRepository implements CommentRepository {
     public DBCommentRepository(){
         System.out.println("Repository create");

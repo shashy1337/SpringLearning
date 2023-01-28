@@ -19,8 +19,7 @@ public class ProjectConfig {
     }
 
     @Bean
-    public CommentService commentService(CommentRepository dbCommentRepository,
-                                         CommentNotificationProxy commentNotificationProxy){
-        return new CommentService(commentNotificationProxy, dbCommentRepository);
+    public CommentService commentService(){
+        return new CommentService();
     }
 }

@@ -6,14 +6,10 @@ import ru.shashy.springVerV2.TestByCleanSpringExampleFromBook.Helper.CommentNoti
 import ru.shashy.springVerV2.TestByCleanSpringExampleFromBook.Model.Comment;
 
 @Component
-@Qualifier("EMAIL")
-public class EmailCommentNotificationProxy implements CommentNotificationProxy {
-
-    public EmailCommentNotificationProxy(){
-        System.out.println("proxy create!");
-    }
+@Qualifier("PUSH")
+public class PushCommentNotificationProxy implements CommentNotificationProxy {
     @Override
     public void shareText(Comment comment) {
-        System.out.println(String.format("Author: %s, text: %s", comment.getAuthor(), comment.getText()));
+        System.out.println("pushed text: " + comment.getText());
     }
 }

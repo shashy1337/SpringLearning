@@ -12,12 +12,6 @@ public class CommentService {
     @Autowired
     CommentRepository repository;
 
-    public CommentService(CommentNotificationProxy proxy, CommentRepository repository){
-        this.proxy = proxy;
-        this.repository = repository;
-
-        System.out.println("Service created!");
-    }
 
     public void sendComment(Comment comment){
         proxy.share(comment);

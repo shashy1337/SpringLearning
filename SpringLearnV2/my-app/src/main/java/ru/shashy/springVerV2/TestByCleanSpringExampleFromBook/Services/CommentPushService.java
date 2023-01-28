@@ -6,20 +6,21 @@ import ru.shashy.springVerV2.TestByCleanSpringExampleFromBook.Helper.CommentNoti
 import ru.shashy.springVerV2.TestByCleanSpringExampleFromBook.Helper.CommentRepository;
 import ru.shashy.springVerV2.TestByCleanSpringExampleFromBook.Model.Comment;
 
-
 @Service
-public class CommentServiceT {
+public class CommentPushService {
+
     private final CommentNotificationProxy proxy;
+
     private final CommentRepository repository;
 
-    public CommentServiceT(@Qualifier("EMAIL")CommentNotificationProxy proxy, CommentRepository repository){
+    public CommentPushService(@Qualifier("PUSH")CommentNotificationProxy proxy, CommentRepository repository){
         this.proxy = proxy;
         this.repository = repository;
-        System.out.println("Service Create!");
     }
 
     public void sendComment(Comment comment){
         proxy.shareText(comment);
         repository.sendText(comment);
     }
+
 }
