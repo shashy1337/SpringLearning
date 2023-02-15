@@ -1,10 +1,49 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Home Page</title>
+	<title>Добро пожаловать на наш сайт!</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		h1 {
+			font-size: 4rem;
+			font-weight: bold;
+			text-align: center;
+			color: #333;
+			margin-bottom: 2rem;
+		}
+		p {
+			font-size: 1.5rem;
+			text-align: center;
+			color: #666;
+			margin-bottom: 2rem;
+		}
+		button {
+			padding: 1rem 2rem;
+			font-size: 1.5rem;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #666;
+		}
+	</style>
 </head>
 <body>
-    <h1>Welcome!</h1>
+	<div class="container">
+		<h1>Добро пожаловать на наш сайт!</h1>
+		<p>Мы рады приветствовать вас на нашем сайте. Здесь вы найдете много интересной информации.</p>
+		<button>Начать</button>
+	</div>
 </body>
 </html>
