@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th = "http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8">
+        <title>Product Page</title>
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            form label {
+                margin-bottom: 10px;
+            }
+
+            form input[type="text"],
+            form input[type="number"] {
+                padding: 5px;
+                margin-bottom: 10px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            form button[type="submit"] {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Products</h1>
+        <h2>View products</h2>
+
+         <table border="1">
+        <tr>
+            <th>PRODUCT NAME</th>
+            <th>PRODUCT PRICE</th>
+        </tr>
+        <tr th:each= "p: ${products}">
+            <td th:text = "${p.name}"></td>
+            <td th:text = "${p.price}"></td>
+        </tr>
+    </table>
+        <h2>Add Products into table</h2>
+        <form action="/products" method="POST">
+            Name: <input type="text" name = "name"><br />
+            Price: <input type="number" name="price" step="any"><br />
+            <button type="submit">Add product</button>
+        </form>
+    </body>
+</html>
