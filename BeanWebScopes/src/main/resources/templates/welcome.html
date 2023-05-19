@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Приветствие на HTML</title>
+  <style>
+    /* Стили для красивого оформления */
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      font-size: 36px;
+      margin-top: 50px;
+    }
+    p {
+      color: #666;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<h1>Добро пожаловать на мою страницу, <span th:text = "${username}"></span></h1>
+<p>Я очень рад приветствовать вас здесь. Вы вошли по счету: <span th:text="${counter}"></span> </p>
+<a href="/welcome?Logout">Log out</a>
+</body>
+</html>

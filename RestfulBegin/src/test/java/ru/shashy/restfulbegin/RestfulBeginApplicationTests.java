@@ -1,0 +1,13 @@
+package ru.shashy.restfulbegin;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class RestfulBeginApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
