@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>AdministrationPanel</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+<body>
+<div class="table-wrapper">
+    <table>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>nickname</th>
+            <th>password</th>
+            <th>name</th>
+            <th>lastname</th>
+            <th>email</th>
+            <th>roles</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${UserRegistry}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.nickname}"></td>
+            <td th:text="${user.password}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.lastname}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:each=" role : ${user.roles}" th:text="${role.getName()}"></td>
+            <td>
+                <form th:action="@{/admin}" method="post">
+                    <input type="hidden" th:name="userId" th:value="${user.id}"/>
+                    <input type="hidden" th:name="action" th:value="delete"/>
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<a th:href="@{/main}" class="back-btn">Главная</a>
+</body>
+</html>

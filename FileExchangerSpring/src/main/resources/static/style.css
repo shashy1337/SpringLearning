@@ -1,0 +1,122 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    max-width: 400px;
+    padding: 20px;
+}
+h1 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin: 0 0 20px;
+    text-align: center;
+}
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"], input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 10px;
+    width: 95%;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+.error-msg {
+    color: #f44336;
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.back-btn {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 95%;
+}
+
+.table-wrapper {
+    max-width: max-content;
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    table-layout: auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th:first-child, td:first-child {
+    width: 100px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #d9d9d9;
+}
+
+td.action {
+    text-align: center;
+}
+
+td.action button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+td.action button:hover {
+    background-color: #3e8e41;
+}

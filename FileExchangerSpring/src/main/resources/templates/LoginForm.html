@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8">
+  <title>Вход</title>
+  <link rel="stylesheet" th:href="@{style.css}">
+</head>
+<body>
+<div class="container">
+  <h1>Вход</h1>
+  <form th:action="@{/login}" method="post">
+    <label for="nickname">Логин</label>
+    <input type="text" id="nickname" name="nickname" required>
+    <label for="password">Пароль</label>
+    <input type="password" id="password" name="password" required>
+    <input type="submit" value="Войти">
+    <a href="/register" class="back-btn">Регистрация</a>
+    <div th:if="${param.error}">
+      <p style="color: red;">Неправильное имя пользователя или пароль. Попробуйте еще раз.</p>
+    </div>
+  </form>
+</div>
+</body>
+</html>
